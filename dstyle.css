@@ -1,0 +1,54 @@
+body {
+  background-color: #121212; /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.neon-textarea {
+  background-color: #121212; /* Dark background */
+  color: #fff; /* Text color */
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 20px; /* Curved corners */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Neon glow */
+  width: 500px; /* Adjust width as needed */
+  height: 300px; /* Adjust height */
+  resize: none; /* Disable resizing */
+  text-align: justify; /* Justify text */
+}
+
+
+
+
+
+
+.neon-input::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Placeholder color */
+}
+
+/* Neon animation */
+@keyframes neon-animation {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.9), 0 0 40px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.neon-input:focus {
+  animation: neon-animation 1.5s infinite alternate; /* Neon animation on focus */
+}
